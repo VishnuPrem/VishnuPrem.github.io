@@ -24,6 +24,10 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+ html,body {
+   overflow-x: hidden;
+ }
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -2891,6 +2895,7 @@ p {
 
 .title {
   font-weight: 700;
+  text-align: center;
 }
 
 .title.title-up {
@@ -7092,7 +7097,7 @@ Created using IcoMoon - icomoon.io
 
 .cc-profile-image a:before {
   content: "";
-  border: 15px solid rgba(55, 140, 63, 0.6);
+  border: 15px solid #9E9E9E;
   border-radius: 50%;
   height: 180px;
   width: 180px;
@@ -7230,7 +7235,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .cc-contact-information .cc-contact {
-  padding: 8% 0 8% 20%;
+  padding: 8% 0 8% 8%;
 }
 
 @media (max-width: 767px) {
@@ -7276,4 +7281,9 @@ background-attachment: fixed;
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+}
+
+/*slick arrows*/
+.slick-next:before, .slick-prev:before{
+  color:#3F51B5;
 }
