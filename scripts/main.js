@@ -4,7 +4,7 @@
 $(document).ready(function() {
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
-    // once: true  
+   once: true
   }); // initialize animate on scroll library
 });
 
@@ -13,8 +13,8 @@ $('a.smooth-scroll')
 .click(function(event) {
   // On-page links
   if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
     location.hostname == this.hostname
   ) {
     // Figure out element to scroll to
@@ -40,4 +40,15 @@ $('a.smooth-scroll')
       });
     }
   }
+});
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 8);
+  }
+};
+
+$('#backTop').click(function(){
+  scrollToTop();
 });
